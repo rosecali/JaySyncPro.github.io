@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<title>Aries Jay Calinsisan | Virtual Assistant & IT Graduate</title>
+<meta name="description" content="Portfolio of Aries Jay Calinsisan: Virtual Assistant (Social Media Management & Lead Generation) and BS Information Technology graduate.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#ffffff;
+  --bg-soft:#f6f7f8;
+  --text:#161a1f;
+  --muted:#5a636e;
+  --line:#e4e7ea;
+  --accent:#0f766e;
+  --font-body:'IBM Plex Sans',system-ui,sans-serif;
+  --font-head:'Newsreader',Georgia,serif;
+  --radius:8px;
+}
+[data-theme="dark"]{
+  --bg:#0f1316;
+  --bg-soft:#151a1e;
+  --text:#e7ebee;
+  --muted:#98a2ad;
+  --line:#262d33;
+  --accent:#5fd1c3;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.7;font-size:1rem;transition:background .25s,color .25s;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{width:min(1080px,calc(100% - 2.5rem - env(safe-area-inset-left) - env(safe-area-inset-right)));margin-inline:auto}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+
+section{padding:88px 0;border-top:1px solid var(--line)}
+.split{display:grid;grid-template-columns:12.5rem 1fr;gap:48px;align-items:start}
+.split > h2{font-family:var(--font-head);font-weight:500;font-size:1.6rem;line-height:1.2;letter-spacing:-.01em;position:sticky;top:96px}
+.lede{color:var(--muted);max-width:560px;margin-bottom:36px}
+
+.btn{display:inline-flex;align-items:center;padding:11px 22px;border-radius:var(--radius);font-weight:500;font-size:.93rem;border:1px solid var(--text);cursor:pointer;transition:background .2s,color .2s,border-color .2s;font-family:inherit;background:transparent;color:var(--text)}
+.btn-primary{background:var(--text);color:var(--bg)}
+.btn-primary:hover{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn-outline{border-color:var(--line)}
+.btn-outline:hover{border-color:var(--text)}
+
+header{position:fixed;inset:0 0 auto 0;z-index:100;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .25s}
+header.scrolled{border-color:var(--line)}
+nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--font-head);font-weight:600;font-size:1.25rem;display:inline-flex;align-items:center;gap:10px;letter-spacing:-.01em}
+.logo-badge{--logo-zoom:1.15;width:32px;height:32px;border-radius:50%;overflow:hidden;background:#fff;display:block;flex-shrink:0;border:1px solid var(--line)}
+.logo-badge[hidden]{display:none}
+.logo-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transform:scale(var(--logo-zoom))}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:.9rem;color:var(--muted);transition:color .2s;padding:4px 0;border-bottom:1px solid transparent}
+.nav-links a:hover{color:var(--text)}
+.nav-links a.active{color:var(--text);border-bottom-color:var(--accent)}
+.nav-tools{display:flex;gap:10px;align-items:center}
+.icon-btn{height:40px;padding:0 14px;border-radius:var(--radius);border:1px solid var(--line);background:transparent;color:var(--text);cursor:pointer;font-family:inherit;font-size:.82rem;transition:border-color .2s}
+.icon-btn:hover{border-color:var(--text)}
+.menu-btn{display:none}
+
+#home{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding:130px 0 56px;border-top:0}
+.hero-grid{display:grid;grid-template-columns:1.35fr .65fr;gap:64px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:10px;font-size:.88rem;color:var(--muted);margin-bottom:26px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.hero h1{font-family:var(--font-head);font-size:clamp(2.3rem,9vw,5rem);overflow-wrap:anywhere;line-height:1.04;font-weight:500;letter-spacing:-.025em}
+.typed-line{font-family:var(--font-head);font-size:clamp(1.3rem,2.6vw,1.75rem);color:var(--accent);margin:18px 0 22px;min-height:1.6em}
+.cursor{display:inline-block;width:1px;height:1em;background:var(--accent);margin-left:3px;vertical-align:-.12em;animation:blink 1s infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.lead{color:var(--muted);max-width:540px;margin-bottom:32px}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px}
+.socials{display:flex;flex-wrap:wrap;gap:22px;margin-top:36px}
+.socials a{font-size:.9rem;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:2px;transition:color .2s,border-color .2s}
+.socials a:hover{color:var(--accent);border-color:var(--accent)}
+
+.avatar-wrap{justify-self:end;width:min(20rem,100%)}
+.avatar{width:100%;aspect-ratio:4/5;border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;background:var(--bg-soft);display:grid;place-items:center;color:var(--muted);font-family:var(--font-head);font-size:4rem;font-weight:500}
+.avatar img{width:100%;height:100%;object-fit:cover;grid-area:1/1}
+.avatar .initials{grid-area:1/1}
+
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:80px;border-top:1px solid var(--line)}
+.stat{padding:24px 24px 0 0}
+.stat + .stat{padding-left:24px;border-left:1px solid var(--line)}
+.stat b{display:block;font-family:var(--font-head);font-weight:500;font-size:2.4rem;line-height:1.1;letter-spacing:-.02em}
+.stat span{font-size:.86rem;color:var(--muted)}
+
+.about-text p{color:var(--muted);margin-bottom:18px;max-width:640px}
+.about-text p b{color:var(--text);font-weight:500}
+.info-list{display:grid;grid-template-columns:1fr 1fr;gap:0 32px;margin:28px 0 32px;max-width:640px}
+.info-list li{padding:12px 0;border-top:1px solid var(--line);font-size:.95rem}
+.info-list li b{display:block;font-size:.8rem;font-weight:400;color:var(--muted)}
+.edu-list{margin-top:48px;max-width:640px}
+.edu{padding:20px 0;border-top:1px solid var(--line)}
+.edu small{color:var(--accent);font-size:.82rem;font-weight:500}
+.edu h3{font-family:var(--font-head);font-weight:500;font-size:1.25rem;letter-spacing:-.01em;margin-top:2px}
+.edu p{color:var(--muted);font-size:.93rem;margin-top:4px}
+
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:40px}
+.skill-box h3{font-family:var(--font-head);font-weight:500;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:20px}
+.bar{margin-bottom:18px}
+.bar-top{display:flex;justify-content:space-between;gap:12px;font-size:.88rem;margin-bottom:7px}
+.bar-top span:last-child{color:var(--muted)}
+.bar-track{height:3px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar-fill{height:100%;width:0;border-radius:99px;background:var(--accent);transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.tools{margin-top:48px;padding-top:24px;border-top:1px solid var(--line)}
+.tools h3{font-family:var(--font-head);font-weight:500;font-size:1.2rem;letter-spacing:-.01em;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{padding:4px 12px;border-radius:99px;font-size:.82rem;color:var(--muted);border:1px solid var(--line)}
+
+.service{display:grid;grid-template-columns:1fr 1.5fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line)}
+.service:first-child{padding-top:0}
+.service h3{font-family:var(--font-head);font-weight:500;font-size:1.3rem;letter-spacing:-.01em;line-height:1.3}
+.service p{color:var(--text)}
+.service ul{margin-top:10px;font-size:.92rem;color:var(--muted)}
+.service li{padding:2px 0}
+
+.t-item{display:grid;grid-template-columns:10.6rem 1fr;gap:32px;padding:26px 0;border-bottom:1px solid var(--line)}
+.t-item:first-child{padding-top:0}
+.t-date{font-size:.88rem;color:var(--muted);padding-top:5px}
+.t-item h3{font-family:var(--font-head);font-weight:500;font-size:1.3rem;letter-spacing:-.01em;line-height:1.3}
+.t-item h4{font-weight:400;color:var(--accent);font-size:.93rem;margin:2px 0 12px}
+.t-item li{color:var(--muted);font-size:.93rem;margin-bottom:6px}
+
+.filters{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:32px;border-bottom:1px solid var(--line)}
+.filter{padding:8px 0 12px;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;background:transparent;color:var(--muted);font-size:.92rem;cursor:pointer;font-family:inherit;transition:color .2s,border-color .2s}
+.filter:hover{color:var(--text)}
+.filter.active{color:var(--text);border-bottom-color:var(--accent)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(280px,100%),1fr));gap:32px 28px}
+.project{display:flex;flex-direction:column}
+.project.hide{display:none}
+.thumb{aspect-ratio:16/10;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg-soft);overflow:hidden;transition:border-color .2s}
+.project[data-drive]:hover .thumb{border-color:var(--accent)}
+.p-body{padding-top:16px;display:flex;flex-direction:column;flex:1}
+.p-body h3{font-family:var(--font-head);font-weight:500;font-size:1.2rem;letter-spacing:-.01em;line-height:1.3;margin-bottom:6px}
+.p-body p{color:var(--muted);font-size:.92rem;flex:1}
+.p-body .tags{margin-top:14px}
+.p-links{margin-top:12px;font-size:.88rem;color:var(--accent)}
+.p-links a:hover{text-decoration:underline}
+
+.contact-info-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:48px}
+.c-item{padding:16px 0;border-top:1px solid var(--line);min-width:0;overflow-wrap:anywhere}
+.c-item small{display:block;color:var(--muted);font-size:.8rem}
+.c-item a{transition:color .2s}
+.c-item a:hover{color:var(--accent)}
+
+footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.86rem}
+.to-top{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));width:42px;height:42px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--text);font-size:1.05rem;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .25s,border-color .2s;z-index:90}
+.to-top:hover{border-color:var(--text)}
+.to-top.show{opacity:1;pointer-events:auto}
+
+.reveal{opacity:0;transition:opacity .6s}
+.reveal.in{opacity:1}
+
+@media(max-width:900px){
+  #home{min-height:0;padding:96px 0 40px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .avatar-wrap{order:-1;justify-self:start;width:124px}
+  .avatar{font-size:2.2rem}
+  .stats{grid-template-columns:repeat(2,1fr);margin-top:44px}
+  .stat{padding:20px 16px 0 0}
+  .stat + .stat{padding-left:16px}
+  .stat:nth-child(odd){padding-left:0;border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line);margin-top:20px}
+  .split{grid-template-columns:1fr;gap:22px}
+  .split > h2{position:static;font-size:1.5rem}
+  .menu-btn{display:inline-block}
+  .nav-links{position:absolute;top:64px;left:0;right:0;background:var(--bg);flex-direction:column;align-items:stretch;padding:4px max(1.25rem,env(safe-area-inset-left)) 12px;gap:0;border-bottom:1px solid var(--line);transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;z-index:-1;max-height:calc(100vh - 64px);overflow-y:auto}
+  .nav-links.open{transform:none;opacity:1;visibility:visible}
+  .nav-links li{border-bottom:1px solid var(--line)}
+  .nav-links li:last-child{border-bottom:0}
+  .nav-links a{display:block;padding:14px 0;font-size:1rem;border-bottom:0}
+  .nav-links a.active{color:var(--accent)}
+  section{padding:56px 0}
+}
+@media(max-width:640px){
+  .btn{min-height:44px}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{width:100%;justify-content:center}
+  .socials{gap:12px 20px;margin-top:28px}
+  .stat b{font-size:2rem}
+  .stat span{font-size:.8rem}
+  .lede{margin-bottom:28px}
+  .skills-grid{gap:32px}
+  .tools{margin-top:36px}
+  .service,.t-item{grid-template-columns:1fr;gap:6px;padding:22px 0}
+  .service h3,.t-item h3{font-size:1.2rem}
+  .t-date{padding-top:0}
+  .filters{gap:6px 22px}
+  .projects-grid{gap:28px}
+  .contact-info-grid,.info-list{grid-template-columns:1fr}
+  .edu-list{margin-top:36px}
+}
+@media(max-width:380px){
+  .logo{font-size:1.1rem}
+  .nav-tools{gap:6px}
+  .icon-btn{padding:0 10px}
+  .stat b{font-size:1.8rem}
+  .stat span{font-size:.76rem}
+}
+@media(max-height:480px) and (orientation:landscape){
+  #home{padding:84px 0 32px}
+  .avatar-wrap{width:96px}
+}
+@media(hover:none){
+  .btn-primary:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
+  .btn-outline:hover{border-color:var(--line)}
+  .project[data-drive]:hover .thumb{border-color:var(--line)}
+}
+@media(max-width:640px){
+  html{scroll-padding-top:56px}
+  body{font-size:13px;line-height:1.6}
+  .container{width:min(1080px,calc(100% - 2rem - env(safe-area-inset-left) - env(safe-area-inset-right)))}
+  nav{height:48px}
+  .logo{font-size:15px;gap:7px}
+  .logo-badge{width:24px;height:24px}
+  .icon-btn{height:30px;padding:0 10px;font-size:11px;border-radius:6px}
+  .nav-tools{gap:6px}
+  .nav-links{top:48px;max-height:calc(100vh - 48px)}
+  .nav-links a{padding:11px 0;font-size:13px}
+  #home{padding:72px 0 28px}
+  .hero-grid{gap:16px}
+  .badge{font-size:11.5px;margin-bottom:14px;gap:7px}
+  .badge i{width:6px;height:6px}
+  .hero h1{font-size:30px;line-height:1.1}
+  .typed-line{font-size:15px;margin:8px 0 12px}
+  .hero p.lead{font-size:12.5px;margin-bottom:18px}
+  .btn{padding:7px 14px;font-size:12px;min-height:34px;border-radius:6px}
+  .hero-btns{flex-direction:row;gap:8px}
+  .hero-btns .btn{width:auto}
+  .socials{gap:8px 16px;margin-top:18px}
+  .socials a{font-size:12px}
+  .avatar-wrap{width:64px}
+  .avatar{font-size:1.3rem;border-radius:6px}
+  .stats{margin-top:28px}
+  .stat{padding:12px 10px 0 0}
+  .stat + .stat{padding-left:10px}
+  .stat:nth-child(odd){padding-left:0}
+  .stat:nth-child(n+3){margin-top:12px}
+  .stat b{font-size:20px}
+  .stat span{font-size:11px;line-height:1.4;display:block}
+  section{padding:32px 0}
+  .split{gap:14px}
+  .split > h2{font-size:18px}
+  .lede{font-size:12.5px;margin-bottom:18px}
+  .about-text p{font-size:12.5px;margin-bottom:12px}
+  .info-list{grid-template-columns:1fr 1fr;gap:0 16px;margin:16px 0 18px}
+  .info-list li{padding:8px 0;font-size:12px}
+  .info-list li b{font-size:10.5px}
+  .edu-list{margin-top:22px}
+  .edu{padding:12px 0}
+  .edu small{font-size:11px}
+  .edu h3{font-size:15px}
+  .edu p{font-size:12px}
+  .skills-grid{gap:22px}
+  .skill-box h3,.tools h3{font-size:15px;margin-bottom:12px}
+  .bar{margin-bottom:11px}
+  .bar-top{font-size:12px;margin-bottom:4px}
+  .tools{margin-top:24px;padding-top:16px}
+  .tags{gap:5px}
+  .tags span{font-size:11px;padding:2px 9px}
+  .service,.t-item{padding:14px 0;gap:3px}
+  .service:first-child,.t-item:first-child{padding-top:0}
+  .service h3,.t-item h3{font-size:15px}
+  .service p{font-size:12.5px}
+  .service ul,.t-item li{font-size:12px}
+  .service ul{margin-top:6px}
+  .t-item h4{font-size:12px;margin:1px 0 8px}
+  .t-item li{margin-bottom:3px}
+  .t-date{font-size:11px}
+  .filters{gap:4px 16px;margin-bottom:18px}
+  .filter{font-size:12px;padding:6px 0 8px}
+  .projects-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 12px}
+  .thumb{border-radius:6px}
+  .p-body{padding-top:8px}
+  .p-body h3{font-size:13.5px;margin-bottom:3px}
+  .p-body p{font-size:11px;line-height:1.5}
+  .p-body .tags{margin-top:8px}
+  .p-body .tags span{font-size:10px;padding:1px 7px}
+  .p-links{font-size:11px;margin-top:8px}
+  .c-item{padding:10px 0;font-size:12.5px}
+  .c-item small{font-size:10.5px}
+  footer{padding:18px 0;font-size:11px}
+  .to-top{width:34px;height:34px;font-size:.9rem;border-radius:6px}
+}
+@media(min-width:641px) and (max-width:1024px){
+  #home{min-height:0;padding:112px 0 56px}
+  .hero-grid{grid-template-columns:1.4fr .6fr;gap:36px}
+  .avatar-wrap{order:0;justify-self:end;width:min(13rem,100%)}
+  .avatar{font-size:3rem}
+  .hero h1{font-size:clamp(2.6rem,6.5vw,3.6rem)}
+  .stats{grid-template-columns:repeat(4,1fr);margin-top:56px}
+  .stat{padding:24px 16px 0 0}
+  .stat + .stat{padding-left:16px;border-left:1px solid var(--line)}
+  .stat:nth-child(n+3){border-top:0;margin-top:0}
+  .stat b{font-size:2.1rem}
+  .projects-grid{grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr))}
+}
+@media(min-width:768px) and (max-width:1024px){
+  .split{grid-template-columns:9.5rem 1fr;gap:28px}
+  .split > h2{position:sticky;top:80px;font-size:1.4rem}
+  .skills-grid{grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:28px}
+}
+
+@media(min-width:1440px){
+  .container{width:min(1200px,calc(100% - 6rem))}
+  .hero-grid{gap:80px}
+}
+@media(min-width:1920px){
+  html{font-size:125%;scroll-padding-top:96px}
+  .container{width:min(1500px,calc(100% - 8rem))}
+  nav{height:80px}
+  .logo-badge{width:40px;height:40px}
+  .icon-btn{height:48px}
+  #home{padding-top:160px}
+  .split > h2{top:112px}
+}
+@media(min-width:2560px){
+  html{font-size:150%}
+  .container{width:min(1800px,calc(100% - 10rem))}
+}
+
+@media(min-width:641px) and (max-height:700px) and (orientation:landscape){
+  #home{min-height:0;padding:96px 0 40px}
+  section{padding:56px 0}
+  nav{height:56px}
+  .nav-links{top:56px}
+  .stats{margin-top:36px}
+  .avatar-wrap{width:11rem}
+  .hero h1{font-size:clamp(2.2rem,5vw,3.2rem)}
+  .split > h2{top:72px}
+}
+@media(max-height:480px) and (orientation:landscape){
+  .avatar-wrap{width:6.5rem}
+}
+
+@media(pointer:coarse) and (min-width:641px){
+  .btn{min-height:46px}
+  .icon-btn{height:44px}
+  .filter{padding:12px 0 14px}
+  .nav-links a{padding:10px 0}
+  .to-top{width:48px;height:48px}
+}
+
+@media(max-width:300px){
+  .container{width:calc(100% - 1.5rem)}
+  .logo-text{font-size:13px}
+  .icon-btn{padding:0 8px}
+  .hero h1{font-size:24px}
+  .typed-line{font-size:13px}
+  .hero-btns{flex-direction:column}
+  .hero-btns .btn{width:100%;justify-content:center}
+  .avatar-wrap{width:52px}
+  .stat b{font-size:17px}
+  .stat span{font-size:10px}
+  .split > h2{font-size:16px}
+  .skill-box h3,.edu h3,.service h3,.t-item h3{font-size:14px}
+  .projects-grid,.info-list{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1}}
+</style>
+</head>
+
+<body>
+
+<header id="header">
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo"><span class="logo-badge" data-img-box hidden><img id="logoImg" class="logo-img" alt="Logo"></span><span class="logo-text">JaySyncPro</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-tools">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">Dark</button>
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Menu">Menu</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section id="home" class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <div class="badge"><i></i> Available for Virtual Assistant work</div>
+        <h1>Aries Jay Calinisan</h1>
+        <div class="typed-line"><span id="typed"></span><span class="cursor"></span></div>
+        <p class="lead">I help businesses grow online through consistent social media management and targeted lead generation, backed by 3 years of lead generation experience, a Bachelor's degree in Information Technology, and hands-on design and web skills.</p>
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Hire me</a>
+          <a href="#projects" class="btn btn-outline">View my work</a>
+          <a href="#" class="btn btn-outline" id="cvBtn" target="_blank" rel="noopener">View my resume</a>
+        </div>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=61595052513820" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.linkedin.com/in/aries-jay-calinisan-3a335543b/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.tiktok.com/@jaysyncpro" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.instagram.com/jaysyncpro" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <span class="initials">AJ</span>
+          <img id="profileImg" alt="Aries Jay Calinsisan" hidden>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat reveal"><b data-count="1">0</b><span>Internship completed</span></div>
+      <div class="stat reveal"><b data-count="3">0</b><span>Years of lead generation experience</span></div>
+      <div class="stat reveal"><b data-count="5">0</b><span>Core tech skills</span></div>
+      <div class="stat reveal"><b data-count="2">0</b><span>Career niches</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container split">
+    <h2>About</h2>
+    <div class="reveal">
+      <div class="about-text">
+<p>I'm a fresh Bachelor of Science in Information Technology graduate who is building a career in <b>Web Development and Programming</b>, while also offering services as a Virtual Assistant. I focus on creating responsive, user-friendly websites and enjoy turning ideas into functional digital experiences. I also have skills in <b>social media management</b> and <b>lead generation</b>, including <b>3 years of lead generation experience</b> finding potential clients and buyers on Facebook for a tilapia harvesting business, combining my technical and creative abilities to help businesses grow online.</p>
+
+<p>Through my IT internship, I gained experience working in a professional environment, meeting deadlines, communicating clearly, and solving problems. I'm also continuously improving my web development and programming skills while training at <b>THE VA BAR (Batch 19)</b> to strengthen my skills as a professional VA.</p>
+
+        <ul class="info-list">
+          <li><b>Name</b>Aries Jay Calinisan</li>
+          <li><b>Niche</b>Social Media & Lead Gen</li>
+          <li><b>Degree</b>BS Information Technology</li>
+          <li><b>Languages</b>English, Filipino</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Let's work together</a>
+      </div>
+
+      <div class="edu-list">
+        <div class="edu">
+          <small>Education</small>
+          <h3>BS Information Technology</h3>
+          <p>Lemery Colleges, graduated June 29, 2026</p>
+        </div>
+        <div class="edu">
+          <small>Training</small>
+          <h3>THE VA BAR: Batch 19 (Night Class)</h3>
+          <p>Virtual Assistant training focused on social media management and lead generation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container split">
+    <h2>Skills</h2>
+    <div>
+      <p class="lede reveal">A mix of VA essentials, creative design, and technical know-how.</p>
+      <div class="skills-grid">
+        <div class="skill-box reveal">
+          <h3>Virtual assistant</h3>
+          <div class="bar"><div class="bar-top"><span>Social Media Management</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-level="85"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>Lead Generation</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-level="80"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>Content Scheduling</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-level="85"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>Email & Admin Support</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-level="85"></div></div></div>
+        </div>
+
+        <div class="skill-box reveal">
+          <h3>Creative</h3>
+          <div class="bar"><div class="bar-top"><span>Graphic Design (Canva)</span><span>90%</span></div><div class="bar-track"><div class="bar-fill" data-level="90"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>Photo Editing</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-level="85"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>Video Editing</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-level="80"></div></div></div>
+        </div>
+
+        <div class="skill-box reveal">
+          <h3>Technical</h3>
+          <div class="bar"><div class="bar-top"><span>HTML / CSS / JavaScript</span><span>85%</span></div><div class="bar-track"><div class="bar-fill" data-level="85"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>PHP</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-level="80"></div></div></div>
+          <div class="bar"><div class="bar-top"><span>MySQL</span><span>80%</span></div><div class="bar-track"><div class="bar-fill" data-level="80"></div></div></div>
+        </div>
+      </div>
+
+      <div class="tools reveal">
+        <h3>Tools I use</h3>
+        <div class="tags">
+          <span>Canva</span><span>Meta Business Suite</span><span>Google Workspace</span><span>Excel / Sheets</span>
+          <span>Photoshop / Photo Editors</span><span>Video Editors</span><span>VS Code</span><span>XAMPP</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container split">
+    <h2>Services</h2>
+    <div>
+      <p class="lede reveal">Focused services so you can concentrate on running your business.</p>
+      <div class="service reveal">
+        <h3>Social Media Management</h3>
+        <div>
+          <p>Keep your pages active, consistent, and on-brand.</p>
+          <ul><li>Content calendar & scheduling</li><li>Post design (Canva)</li><li>Page & inbox monitoring</li></ul>
+        </div>
+      </div>
+      <div class="service reveal">
+        <h3>Lead Generation</h3>
+        <div>
+          <p>Find and organize the right prospects for your business.</p>
+          <ul><li>Prospect research</li><li>Lead list building</li><li>Outreach support</li></ul>
+        </div>
+      </div>
+      <div class="service reveal">
+        <h3>Graphic & Video Design</h3>
+        <div>
+          <p>Eye-catching visuals that make your brand stand out.</p>
+          <ul><li>Social media graphics</li><li>Photo editing</li><li>Short video edits</li></ul>
+        </div>
+      </div>
+      <div class="service reveal">
+        <h3>Web & Tech Support</h3>
+        <div>
+          <p>Simple websites and technical help using my IT background.</p>
+          <ul><li>Landing pages / portfolios</li><li>Basic PHP & MySQL work</li><li>Data organization</li></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container split">
+    <h2>Experience</h2>
+    <div>
+      <div class="t-item reveal">
+        <span class="t-date">3 years of experience</span>
+        <div>
+          <h3>Lead Generation Specialist</h3>
+          <h4>Gomez Tilapia Harvester</h4>
+          <ul>
+            <li>Searched Facebook pages to find potential clients and buyers in Manila.</li>
+            <li>Shortlisted prospects best suited to buy the company's tilapia harvests.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-date">Feb 2026 to May 2026</span>
+        <div>
+          <h3>IT Intern</h3>
+          <h4>St. Louis Golden Harvest Inc.</h4>
+          <ul>
+            <li>Supported day-to-day IT tasks in a real company setting.</li>
+            <li>Applied PHP, MySQL, HTML, CSS, and JavaScript in practical work.</li>
+            <li>Worked on graphic design and photo/video editing tasks.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-date">2026 to present</span>
+        <div>
+          <h3>Virtual Assistant Trainee</h3>
+          <h4>THE VA BAR, Batch 39 (Night Class)</h4>
+          <ul>
+            <li>Training in social media management and lead generation.</li>
+            <li>Building a professional VA portfolio and client-ready workflow.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="t-item reveal">
+        <span class="t-date">Graduated June 29, 2026</span>
+        <div>
+          <h3>BS Information Technology</h3>
+          <h4>Lemery Colleges</h4>
+          <ul>
+            <li>Built web and database projects with PHP, MySQL, and front-end technologies.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container split">
+    <h2>Projects</h2>
+    <div>
+      <p class="lede reveal">A selection of sample work across social media, design, and web.</p>
+      <div class="filters reveal">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="social">Social Media</button>
+        <button class="filter" data-filter="design">Design</button>
+        <button class="filter" data-filter="web">Web</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <article class="project reveal" data-cat="social" data-drive="https://drive.google.com/drive/folders/1fyWCEqdmLdac7ZSL6ZbEbyfIyBHI4Ghg?usp=sharing">
+          <div class="thumb" data-img="https://media.licdn.com/dms/image/v2/D4D12AQHtHtq-XMVzxw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1722675652058?e=2147483647&v=beta&t=dZ_lkfiNzXtgby2Xts58HMJWYJhDycCBDsSpQYsY56k"></div>
+          <div class="p-body">
+            <h3>Social Media Content Pack</h3>
+            <p>A set of branded posts and a monthly content calendar for a sample business page.</p>
+            <div class="tags"><span>Canva</span><span>Content Plan</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="social" data-drive="https://drive.google.com/drive/folders/1XZoudKuL7Ml8MJ3pEfbVJOiDLV5WR1D7?usp=sharing">
+          <div class="thumb" data-img="https://media.licdn.com/dms/image/v2/D5612AQGmdZnm_qc1Zw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1694623314386?e=2147483647&v=beta&t=jCfBr0MADaI_vKKlZY9Uj7j5WhYGSOWfyUnPahPvV48"></div>
+          <div class="p-body">
+            <h3>Lead Generation List</h3>
+            <p>Researched and organized a prospect list with contact details and categories.</p>
+            <div class="tags"><span>Research</span><span>Google Sheets</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="design" data-drive="https://drive.google.com/drive/folders/1ToAcn-ZZOyRi-05t6W7DDIpqIbfXMx3r?usp=sharing">
+          <div class="thumb" data-img="https://classplusapp.com/growth/wp-content/uploads/2025/08/afb40ab2ae4b1bb3b35e6d3358587bc5.jpg"></div>
+          <div class="p-body">
+            <h3>Brand & Poster Designs</h3>
+            <p>Posters, banners, and promotional graphics created for different themes.</p>
+            <div class="tags"><span>Canva</span><span>Photo Editing</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="design" data-drive="https://drive.google.com/drive/folders/1nNxYEuN4UOhQTj5dLRJQA26UqPBfPISl?usp=sharing">
+          <div class="thumb" data-img="https://cdn.mos.cms.futurecdn.net/CFGW9pccdthicKaiM5Tbh5.png"></div>
+          <div class="p-body">
+            <h3>Short Video Edits</h3>
+            <p>Edited promotional and social media clips with captions and transitions.</p>
+            <div class="tags"><span>Video Editing</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web" data-drive="https://drive.google.com/drive/folders/1YxfyJivfYI-sYQGtcnXPbFwZHUjx38_l?usp=sharing">
+          <div class="thumb" data-img="https://static0.howtogeekimages.com/wordpress/wp-content/uploads/2025/03/an-integrated-developer-environment-and-the-vs-code-logo-in-the-center.jpg?w=1600&h=900&fit=crop"></div>
+          <div class="p-body">
+            <h3>Capstone / Web System</h3>
+            <p>A database-driven web application built with PHP and MySQL.</p>
+            <div class="tags"><span>PHP</span><span>MySQL</span><span>JavaScript</span></div>
+          </div>
+        </article>
+
+        <article class="project reveal" data-cat="web">
+          <div class="thumb" data-img="https://scontent.fmnl8-3.fna.fbcdn.net/v/t39.30808-6/825327524_1750764796212276_2718432777709156519_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeGxGyi1fbt1xnz-T7MMaZkKQIMfR2Pv4i5Agx9HY-_iLrgyWQbuw-yh28tfw0khPYW3wJPj5YwGUsd70MKV1Bwk&_nc_ohc=X0Xci-Mg5xwQ7kNvwGU7jqa&_nc_oc=AdqqNLtLIXhhnyjcfC-IrPzOyXzeAi9XUahn5ETLYh_W9OzxsgXOZXak_wuvYrQWFKE&_nc_zt=23&_nc_ht=scontent.fmnl8-3.fna&_nc_gid=UqMH00KVaAI-NgaEKN99qw&_nc_ss=7a2a8&oh=00_AQMl4_bI400sSw-79Gupv9JP26PaRGn9JnCYX6LTujH1AQ&oe=6AD3C8AA"></div>
+          <div class="p-body">
+            <h3>Personal Portfolio Website</h3>
+            <p>This responsive portfolio built with HTML, CSS, and JavaScript.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            <div class="p-links"><a href="#home">You're here</a></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container split">
+    <h2>Contact</h2>
+    <div>
+      <p class="lede reveal">Have a project or need a reliable VA? Send me a message and I'll get back to you.</p>
+      <div class="reveal contact-info-grid">
+        <div class="c-item">
+          <small>Email</small>
+          <a href="mailto:ariesjaycalinisan01@gmail.com">ariesjaycalinisan01@gmail.com</a>
+        </div>
+       
+        <div class="c-item">
+          <small>Location</small>
+          Philippines
+        </div>
+        <div class="c-item">
+          <small>Availability</small>
+          Mon to Fri, flexible schedule
+        </div>
+        <div class="c-item">
+          <small>Facebook</small>
+          <a href="https://www.facebook.com/profile.php?id=61595052513820" target="_blank" rel="noopener">JaySyncPro</a>
+        </div>
+        <div class="c-item">
+          <small>LinkedIn</small>
+          <a href="https://www.linkedin.com/in/aries-jay-calinisan-3a335543b/" target="_blank" rel="noopener">JaySyncPro</a>
+        </div>
+        <div class="c-item">
+          <small>Instagram</small>
+          <a href="https://www.instagram.com/jaysyncpro" target="_blank" rel="noopener">JaySyncPro</a>
+        </div>
+        <div class="c-item">
+          <small>TikTok</small>
+          <a href="https://www.tiktok.com/@jaysyncpro" target="_blank" rel="noopener">JaySyncPro</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© <span id="year"></span> Aries Jay Calinisan   V/A</div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+const CONFIG = {
+  email: "ariesjaycalinisan01@gmail.com",
+  profileImage: "https://scontent.fmnl45-1.fna.fbcdn.net/v/t39.30808-6/825327524_1750764796212276_2718432777709156519_n.jpg?stp=dst-jpg_tt6&cstp=mx1024x1024&ctp=s1024x1024&_nc_cat=106&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=cP8hg5ucMf8Q7kNvwFimDso&_nc_oc=Ado0LRH0bHYsmA1UJac_r-hcTzYkrtn6vlOVxKPz_-Ew3UukBB_NfHz3I6WmwiqEtkg&_nc_zt=23&_nc_ht=scontent.fmnl45-1.fna&_nc_gid=8ryL0zLrRDeP5yl3Q9kAsw&_nc_ss=7b2a8&oh=00_AQOBrZIYuWKxkfEKF3khCQevseab2kSqHIMUPN7F78tp6w&oe=6AD00C6A",
+  logoImage: "https://scontent.fmnl17-2.fna.fbcdn.net/v/t39.30808-6/844069971_122103374619501750_4715520042118603085_n.jpg?stp=dst-jpg_tt6&cstp=mx2000x2000&ctp=s2000x2000&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=127cfc&_nc_ohc=sfcdSRmlYN8Q7kNvwHGp1wV&_nc_oc=Ado6O3sdlqnEoG4o1_OBWDSeDx2pd1t11wjVZ7a5nyYJ9gcQHTKlLc6lJ9qiG0fy_E0&_nc_zt=23&_nc_ht=scontent.fmnl17-2.fna&_nc_gid=67b585qRaJiIC6EQ0ijXpQ&_nc_ss=7b2a8&oh=00_AQOCgVEwATh_K3HZRcwnC79lgek9aeXGhP3Z2QnPCotdjA&oe=6AD05103",
+  cvLink: "https://drive.google.com/drive/folders/1jKEUQ3NIHHqs2FSfMRW1UyT0Z91HNvAU?usp=sharing",
+  typedWords: [
+    "Virtual Assistant",
+    "Social Media Manager",
+    "Lead Generation Specialist",
+    "Graphic Designer",
+    "IT Graduate"
+  ]
+};
+
+const $  = (s, p = document) => p.querySelector(s);
+const $$ = (s, p = document) => [...p.querySelectorAll(s)];
+
+function loadImg(el, src){
+  if (!el) return;
+  const box = el.closest('[data-img-box]') || el;
+  if (!src){ box.remove(); return; }
+  el.referrerPolicy = 'no-referrer';
+  el.onload = () => { el.hidden = false; box.hidden = false; };
+  el.onerror = () => box.remove();
+  el.src = src;
+}
+loadImg($('#profileImg'), CONFIG.profileImage);
+loadImg($('#logoImg'), CONFIG.logoImage);
+
+$('#year').textContent = new Date().getFullYear();
+function cvHref(u){
+  const m = u.match(/drive\.google\.com\/file\/d\/([\w-]+)/) || u.match(/drive\.google\.com\/open\?id=([\w-]+)/);
+  return m ? `https://drive.google.com/uc?export=download&id=${m[1]}` : u;
+}
+if (CONFIG.cvLink) $('#cvBtn').href = cvHref(CONFIG.cvLink);
+else $('#cvBtn').addEventListener('click', e => { e.preventDefault(); alert('CV coming soon. Please contact me directly for my resume.'); });
+
+const root = document.documentElement, themeBtn = $('#themeBtn');
+function setTheme(t){ root.dataset.theme = t; themeBtn.textContent = t === 'dark' ? 'Light' : 'Dark'; try{ localStorage.setItem('theme', t) }catch(e){} }
+let saved = null; try{ saved = localStorage.getItem('theme') }catch(e){}
+setTheme(saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+themeBtn.onclick = () => setTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
+
+const nav = $('#navLinks');
+const menuBtn = $('#menuBtn');
+function setMenu(open){
+  nav.classList.toggle('open', open);
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.textContent = open ? 'Close' : 'Menu';
+}
+menuBtn.setAttribute('aria-expanded', 'false');
+menuBtn.onclick = () => setMenu(!nav.classList.contains('open'));
+$$('#navLinks a').forEach(a => a.onclick = () => setMenu(false));
+document.addEventListener('click', e => { if (nav.classList.contains('open') && !e.target.closest('header')) setMenu(false); });
+addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+addEventListener('resize', () => { if (innerWidth > 900) setMenu(false); });
+
+const sections = $$('section[id]'), links = $$('#navLinks a');
+addEventListener('scroll', () => {
+  $('#header').classList.toggle('scrolled', scrollY > 20);
+  $('#toTop').classList.toggle('show', scrollY > 600);
+  let cur = '';
+  sections.forEach(s => { if (scrollY >= s.offsetTop - 140) cur = s.id; });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+}, { passive: true });
+$('#toTop').onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
+
+(function typing(){
+  const el = $('#typed'), words = CONFIG.typedWords;
+  let w = 0, c = 0, del = false;
+  (function tick(){
+    const word = words[w];
+    el.textContent = word.slice(0, c);
+    if (!del && c === word.length){ del = true; return setTimeout(tick, 1400); }
+    if (del && c === 0){ del = false; w = (w + 1) % words.length; }
+    c += del ? -1 : 1;
+    setTimeout(tick, del ? 40 : 85);
+  })();
+})();
+
+function countUp(el){
+  const target = +el.dataset.count; let n = 0;
+  const step = Math.max(1, Math.ceil(target / 40));
+  const t = setInterval(() => { n = Math.min(target, n + step); el.textContent = n + (target >= 10 ? '+' : ''); if (n >= target) clearInterval(t); }, 40);
+}
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add('in');
+    $$('.bar-fill', e.target).forEach(b => b.style.width = b.dataset.level + '%');
+    $$('[data-count]', e.target).forEach(countUp);
+    io.unobserve(e.target);
+  });
+}, { threshold: .15 });
+$$('.reveal').forEach(el => io.observe(el));
+
+$$('.filter').forEach(btn => btn.onclick = () => {
+  $$('.filter').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const f = btn.dataset.filter;
+  $$('.project').forEach(p => p.classList.toggle('hide', f !== 'all' && p.dataset.cat !== f));
+});
+
+$$('.thumb[data-img]').forEach(box => {
+  const url = box.dataset.img.trim();
+  if (!url) return;
+  const img = new Image();
+  img.referrerPolicy = 'no-referrer';
+  img.onerror = () => console.warn('Picture could not load:', url);
+  img.onload = () => {
+    box.style.backgroundImage = `url("${url}")`;
+    box.style.backgroundSize = 'cover';
+    box.style.backgroundPosition = 'center';
+    box.style.backgroundRepeat = 'no-repeat';
+    box.textContent = '';
+  };
+  img.src = url;
+});
+
+$$('.project[data-drive]').forEach(card => {
+  const url = card.dataset.drive.trim();
+  if (!url) return;
+  card.style.cursor = 'pointer';
+  card.setAttribute('role', 'link');
+  card.tabIndex = 0;
+  const go = () => window.open(url, '_blank', 'noopener');
+  card.addEventListener('click', go);
+  card.addEventListener('keydown', e => { if (e.key === 'Enter') go(); });
+});
+</script>
+</body>
+</html>
